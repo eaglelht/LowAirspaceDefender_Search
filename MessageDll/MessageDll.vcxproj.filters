@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Messages">
+      <UniqueIdentifier>{321318d5-9867-4586-93bb-054a203e8fec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bases">
+      <UniqueIdentifier>{e9f0837b-56bf-4abc-97d9-79c12da890dc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Messages\message_dispatching_center.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\message.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\semaphore.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="test_message_subject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="test_message_observer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\mutex_list.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\message_observer_.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\message_subject.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\mutex_set.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageDll.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Messages\message_dispatching_center.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="test_message_subject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test_message_observer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Bases\test_dll_main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

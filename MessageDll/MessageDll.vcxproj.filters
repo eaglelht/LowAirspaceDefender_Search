@@ -74,7 +74,7 @@
     <ClCompile Include="test_message_observer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Bases\test_dll_main.cpp">
+    <ClCompile Include="test_dll_main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <list>
 #include <boost/smart_ptr/make_shared_object.hpp>
-#include "../Messages/message_dispatching_center.h"
-#include "../test_message_observer.h"
-#include "../test_message_subject.h"
+#include "Messages/message_dispatching_center.h"
+#include "test_message_observer.h"
+#include "test_message_subject.h"
+
 
 int main()
 {

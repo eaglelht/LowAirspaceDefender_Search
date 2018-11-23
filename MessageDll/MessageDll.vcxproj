@@ -160,7 +160,6 @@
     <ClInclude Include="test_message_subject.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Bases\test_dll_main.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="MessageDll.cpp" />
     <ClCompile Include="Messages\message_dispatching_center.cpp" />
@@ -170,6 +169,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="test_dll_main.cpp" />
     <ClCompile Include="test_message_observer.cpp" />
     <ClCompile Include="test_message_subject.cpp" />
   </ItemGroup>

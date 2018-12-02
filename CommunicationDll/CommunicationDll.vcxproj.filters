@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Sessions">
+      <UniqueIdentifier>{ff1eae1b-3605-4b50-9888-7e084dffd881}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IOs">
+      <UniqueIdentifier>{47370e77-b9ca-4a6f-a148-39e506c8cb5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Json">
+      <UniqueIdentifier>{cf3f418a-acbf-4a83-9c06-b898293e394e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bases">
+      <UniqueIdentifier>{39119530-5c7f-465f-9ba6-945fa3a31fa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocols">
+      <UniqueIdentifier>{1c1a75be-7e52-4a27-a7d8-329caaacae67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocols\Servos">
+      <UniqueIdentifier>{b0c23eb8-2425-4217-aa1d-ac26d74315e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocols\IRs">
+      <UniqueIdentifier>{1b0489e7-f42e-480a-93bb-3e53006e6362}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOs\i_io.h">
+      <Filter>IOs</Filter>
+    </ClInclude>
+    <ClInclude Include="IOs\serial_port.h">
+      <Filter>IOs</Filter>
+    </ClInclude>
+    <ClInclude Include="IOs\io_buffer.h">
+      <Filter>IOs</Filter>
+    </ClInclude>
+    <ClInclude Include="IOs\udp.h">
+      <Filter>IOs</Filter>
+    </ClInclude>
+    <ClInclude Include="Json\autolink.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="Json\config.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="Json\features.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="Json\forwards.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="Json\json.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="Json\reader.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="Json\value.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="Json\writer.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="Json\json_tool.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="Json\json_batchallocator.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="Sessions\search_servo_type_001_session.h">
+      <Filter>Sessions</Filter>
+    </ClInclude>
+    <ClInclude Include="Sessions\ir_sensor_type_001_session.h">
+      <Filter>Sessions</Filter>
+    </ClInclude>
+    <ClInclude Include="Sessions\base_session.h">
+      <Filter>Sessions</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\message_observer_.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\message_subject.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\message.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\mutex_list.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\mutex_set.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\semaphore.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\io_buffer_subject.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\io_buffer_observer.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\protocol_subject.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\protocol_observer.h">
+      <Filter>Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocols\i_protocol.h">
+      <Filter>Protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocols\Servo_Protocols\search_type_001_servo_protocol.h">
+      <Filter>Protocols\Servos</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocols\IR_Protocols\search_type_001_ir_sensor_protocol.h">
+      <Filter>Protocols\IRs</Filter>
+    </ClInclude>
+    <ClInclude Include="base_ir_len_protocol.h">
+      <Filter>Protocols\IRs</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocols\Servo_Protocols\base_servo_protocol.h">
+      <Filter>Protocols\Servos</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocols\IR_Protocols\base_sensor_protocol.h">
+      <Filter>Protocols\IRs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CommunicationDll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IOs\serial_port.cpp">
+      <Filter>IOs</Filter>
+    </ClCompile>
+    <ClCompile Include="IOs\udp.cpp">
+      <Filter>IOs</Filter>
+    </ClCompile>
+    <ClCompile Include="text_dll_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Json\json_reader.cpp">
+      <Filter>Json</Filter>
+    </ClCompile>
+    <ClCompile Include="Json\json_value.cpp">
+      <Filter>Json</Filter>
+    </ClCompile>
+    <ClCompile Include="Json\json_writer.cpp">
+      <Filter>Json</Filter>
+    </ClCompile>
+    <ClCompile Include="Sessions\search_servo_type_001_session.cpp">
+      <Filter>Sessions</Filter>
+    </ClCompile>
+    <ClCompile Include="Sessions\ir_sensor_type_001_session.cpp">
+      <Filter>Sessions</Filter>
+    </ClCompile>
+    <ClCompile Include="Sessions\base_session.cpp">
+      <Filter>Sessions</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocols\Servo_Protocols\search_type_001_servo_protocol.cpp">
+      <Filter>Protocols\Servos</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocols\IR_Protocols\search_type_001_ir_sensor_protocol.cpp">
+      <Filter>Protocols\IRs</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocols\Servo_Protocols\base_servo_protocol.cpp">
+      <Filter>Protocols\Servos</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocols\IR_Protocols\base_sensor_protocol.cpp">
+      <Filter>Protocols\IRs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Json\json_valueiterator.inl">
+      <Filter>Json</Filter>
+    </None>
+  </ItemGroup>
+</Project>

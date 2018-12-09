@@ -1,15 +1,10 @@
 #include "stdafx.h"
-#include "base_sensor_protocol.h"
+#include "base_laser_protocol.h"
 #include <boost/lexical_cast.hpp>
 #include "../../Json/reader.h"
 #include "../../Json/value.h"
 
-base_ir_sensor_protocol_out::base_ir_sensor_protocol_out()
-{
-
-}
-
-bool base_ir_sensor_protocol_out::from_message(std::string msg_str)
+bool base_laser_protocol_out::from_message(std::string msg_str)
 {
 	Json::Reader reader;
 	Json::Value info;
@@ -23,16 +18,19 @@ bool base_ir_sensor_protocol_out::from_message(std::string msg_str)
 	}
 	std::string str_command = boost::lexical_cast<std::string>
 		(info["command"].asString());
-	if (str_command.compare("nuc") == 0)
+	if (str_command.compare("shoot_once") == 0)
 	{
-		activate_nuc();
+		shoot_once();
 		return true;
 	}
-	else if (str_command.compare("synchronization") == 0)
+	else if (str_command.compare("power_on") == 0)
 	{
-		sync_model_ = static_cast<E_IR_Sensor_Sync_Model>(boost::lexical_cast<int>
-			(info["param_1"].asString()));
-		set_synchronization_model(sync_model_);
+		power_on();
+		return true;
+	}
+	else if (str_command.compare("power_off") == 0)
+	{
+		power_off();
 		return true;
 	}
 	else

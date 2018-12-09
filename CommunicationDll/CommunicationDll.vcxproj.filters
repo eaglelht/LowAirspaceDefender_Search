@@ -34,6 +34,12 @@
     <Filter Include="Protocols\IRs">
       <UniqueIdentifier>{1b0489e7-f42e-480a-93bb-3e53006e6362}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Protocols\Lasers">
+      <UniqueIdentifier>{453a0372-9b70-47a9-ad82-69f2c622f4a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bases\loki">
+      <UniqueIdentifier>{b5cf75fe-d3ca-470b-bbfd-22b3ff6a9208}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -132,14 +138,161 @@
     <ClInclude Include="Protocols\IR_Protocols\search_type_001_ir_sensor_protocol.h">
       <Filter>Protocols\IRs</Filter>
     </ClInclude>
-    <ClInclude Include="base_ir_len_protocol.h">
-      <Filter>Protocols\IRs</Filter>
-    </ClInclude>
     <ClInclude Include="Protocols\Servo_Protocols\base_servo_protocol.h">
       <Filter>Protocols\Servos</Filter>
     </ClInclude>
     <ClInclude Include="Protocols\IR_Protocols\base_sensor_protocol.h">
       <Filter>Protocols\IRs</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocols\IR_Protocols\base_ir_len_protocol.h">
+      <Filter>Protocols\IRs</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocols\IR_Protocols\search_type_001_ir_len_protocol.h">
+      <Filter>Protocols\IRs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sessions\ir_len_type_001_session.h">
+      <Filter>Sessions</Filter>
+    </ClInclude>
+    <ClInclude Include="Sessions\laser_type_001_session.h">
+      <Filter>Sessions</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocols\Laser_Protocols\laser_type_JDIV4C_protocol.h">
+      <Filter>Protocols\Lasers</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocols\Laser_Protocols\base_laser_protocol.h">
+      <Filter>Protocols\Lasers</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\Factory.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="IOs\io_factory.h">
+      <Filter>IOs</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\AbstractFactory.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\Allocator.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\AssocVector.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\CachedFactory.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\Checker.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\CheckReturn.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\ConstPolicy.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\DataGenerators.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\EmptyType.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\Function.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\Functor.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\HierarchyGenerators.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\Key.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\LevelMutex.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\LockingPtr.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\LokiExport.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\LokiTypeInfo.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\MultiMethods.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\NullType.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\OrderedStatic.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\Pimpl.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\RefToValue.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\Register.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\SafeBits.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\SafeFormat.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\ScopeGuard.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\Sequence.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\Singleton.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\SmallObj.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\SmartPtr.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\SPCachedFactory.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\static_check.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\StrongPtr.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\Threads.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\Tuple.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\Typelist.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\TypelistMacros.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\TypeManip.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\TypeTraits.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Bases\loki\Visitor.h">
+      <Filter>Bases\loki</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocols\protocol_factory.h">
+      <Filter>Protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="Sessions\session_factory.h">
+      <Filter>Sessions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -191,11 +344,43 @@
     <ClCompile Include="Protocols\IR_Protocols\base_sensor_protocol.cpp">
       <Filter>Protocols\IRs</Filter>
     </ClCompile>
+    <ClCompile Include="Protocols\IR_Protocols\base_ir_len_protocol.cpp">
+      <Filter>Protocols\IRs</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocols\IR_Protocols\search_type_001_ir_len_protocol.cpp">
+      <Filter>Protocols\IRs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sessions\ir_len_type_001_session.cpp">
+      <Filter>Sessions</Filter>
+    </ClCompile>
+    <ClCompile Include="Sessions\laser_type_001_session.cpp">
+      <Filter>Sessions</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocols\Laser_Protocols\laser_type_JDIV4C_protocol.cpp">
+      <Filter>Protocols\Lasers</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocols\Laser_Protocols\base_laser_protocol.cpp">
+      <Filter>Protocols\Lasers</Filter>
+    </ClCompile>
+    <ClCompile Include="factory_test_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bases\loki\Singleton.cpp">
+      <Filter>Bases\loki</Filter>
+    </ClCompile>
+    <ClCompile Include="Bases\loki\SmallObj.cpp">
+      <Filter>Bases\loki</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Json\json_valueiterator.inl">
       <Filter>Json</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Bases\loki\readme.txt">
+      <Filter>Bases\loki</Filter>
+    </Text>
   </ItemGroup>
 </Project>

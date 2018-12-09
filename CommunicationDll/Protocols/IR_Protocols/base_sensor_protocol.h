@@ -37,7 +37,7 @@ public:
 	virtual ~base_ir_sensor_protocol_out() {}
 
 	virtual bool from_message(std::string msg_str) override;
-public:
+protected:
 	virtual bool activate_nuc(E_IR_Sensor_NUC_Type type = IR_Sensor_NT_Default) = 0;
 	virtual bool set_synchronization_model(E_IR_Sensor_Sync_Model model, bool save = false) = 0;
 };

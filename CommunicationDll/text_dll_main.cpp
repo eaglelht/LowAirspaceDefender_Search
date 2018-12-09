@@ -7,13 +7,13 @@
 #include <boost/asio/placeholders.hpp>
 #include <boost/thread.hpp>
 #include "Protocols/i_protocol.h"
-#include "Protocols/Servo_Protocols/search_type_001_servo_protocol.h"
 #include "IOs/i_io.h"
-#include "IOs/udp.h"
 #include "Sessions/base_session.h"
-#include "Sessions/search_servo_type_001_session.h"
 #include "Json/value.h"
 #include "Bases/message.h"
+#include "Protocols/protocol_factory.h"
+#include "IOs/io_factory.h"
+#include "Sessions/session_factory.h"
 
 boost::asio::io_service g_service;
 boost::asio::steady_timer g_monitor_timer(g_service);
@@ -54,13 +54,25 @@ void do_monitor(int ms, boost::shared_ptr<base_session> session)
 
 
 int main()
-{	
-	boost::shared_ptr<i_protocol_in> protocol_in
-		= boost::make_shared<search_type_001_servo_protocol_in>();
-	boost::shared_ptr<i_protocol_out> protocol_out
-		= boost::make_shared<search_type_001_servo_protocol_out>();
-	boost::shared_ptr<i_io> io
-		= boost::make_shared<udp>(g_service);
+{
+	register_protocol_factory();
+	register_io_factory();
+	regster_session_factory();
+
+	protocol_in_factory& pif = singleton_protocol_in_factory::Instance();
+	protocol_out_factory& pof = singleton_protocol_out_factory::Instance();
+	io_factory& iof = singleton_io_factory::Instance();
+	session_factory& sf = singleton_session_factory::Instance();
+
+	boost::shared_ptr<i_protocol_in> protocol_in(
+		pif.CreateObject("servo_type_001")
+	);
+	boost::shared_ptr<i_protocol_out> protocol_out(
+		pof.CreateObject("servo_type_001")
+	);
+	boost::shared_ptr<i_io> io(
+		iof.CreateObject("udp", g_service)
+	);
 	//
 	Json::Value info;
 	info["type"] = "udp";
@@ -73,8 +85,9 @@ int main()
 	{
 		return -1;
 	}
-	boost::shared_ptr<base_session> session
-		= boost::make_shared<search_servo_type_001_session>(g_service);
+	boost::shared_ptr<base_session> session(
+		sf.CreateObject("servo", g_service)
+	);
 	if (session->set_protocol_in(protocol_in) == false
 		|| session->set_protocol_out(protocol_out) == false
 		|| session->set_io(io) == false)
@@ -107,4 +120,5 @@ int main()
 	session->stop();
 	//thead_run.join();
 	threads.join_all();
+	return 1;
 }

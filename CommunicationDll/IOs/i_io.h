@@ -6,7 +6,6 @@
 class i_io
 {
 public:
-	i_io() {}
 	virtual ~i_io() {}
 public:
 	virtual bool init(std::string info) = 0;

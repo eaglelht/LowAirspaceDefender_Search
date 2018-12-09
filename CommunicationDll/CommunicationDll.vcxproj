@@ -149,6 +149,47 @@
   <ItemGroup>
     <ClInclude Include="Bases\io_buffer_observer.h" />
     <ClInclude Include="Bases\io_buffer_subject.h" />
+    <ClInclude Include="Bases\loki\AbstractFactory.h" />
+    <ClInclude Include="Bases\loki\Allocator.h" />
+    <ClInclude Include="Bases\loki\AssocVector.h" />
+    <ClInclude Include="Bases\loki\CachedFactory.h" />
+    <ClInclude Include="Bases\loki\Checker.h" />
+    <ClInclude Include="Bases\loki\CheckReturn.h" />
+    <ClInclude Include="Bases\loki\ConstPolicy.h" />
+    <ClInclude Include="Bases\loki\DataGenerators.h" />
+    <ClInclude Include="Bases\loki\EmptyType.h" />
+    <ClInclude Include="Bases\loki\Factory.h" />
+    <ClInclude Include="Bases\loki\Function.h" />
+    <ClInclude Include="Bases\loki\Functor.h" />
+    <ClInclude Include="Bases\loki\HierarchyGenerators.h" />
+    <ClInclude Include="Bases\loki\Key.h" />
+    <ClInclude Include="Bases\loki\LevelMutex.h" />
+    <ClInclude Include="Bases\loki\LockingPtr.h" />
+    <ClInclude Include="Bases\loki\LokiExport.h" />
+    <ClInclude Include="Bases\loki\LokiTypeInfo.h" />
+    <ClInclude Include="Bases\loki\MultiMethods.h" />
+    <ClInclude Include="Bases\loki\NullType.h" />
+    <ClInclude Include="Bases\loki\OrderedStatic.h" />
+    <ClInclude Include="Bases\loki\Pimpl.h" />
+    <ClInclude Include="Bases\loki\RefToValue.h" />
+    <ClInclude Include="Bases\loki\Register.h" />
+    <ClInclude Include="Bases\loki\SafeBits.h" />
+    <ClInclude Include="Bases\loki\SafeFormat.h" />
+    <ClInclude Include="Bases\loki\ScopeGuard.h" />
+    <ClInclude Include="Bases\loki\Sequence.h" />
+    <ClInclude Include="Bases\loki\Singleton.h" />
+    <ClInclude Include="Bases\loki\SmallObj.h" />
+    <ClInclude Include="Bases\loki\SmartPtr.h" />
+    <ClInclude Include="Bases\loki\SPCachedFactory.h" />
+    <ClInclude Include="Bases\loki\static_check.h" />
+    <ClInclude Include="Bases\loki\StrongPtr.h" />
+    <ClInclude Include="Bases\loki\Threads.h" />
+    <ClInclude Include="Bases\loki\Tuple.h" />
+    <ClInclude Include="Bases\loki\Typelist.h" />
+    <ClInclude Include="Bases\loki\TypelistMacros.h" />
+    <ClInclude Include="Bases\loki\TypeManip.h" />
+    <ClInclude Include="Bases\loki\TypeTraits.h" />
+    <ClInclude Include="Bases\loki\Visitor.h" />
     <ClInclude Include="Bases\message.h" />
     <ClInclude Include="Bases\message_observer_.h" />
     <ClInclude Include="Bases\message_subject.h" />
@@ -158,10 +199,10 @@
     <ClInclude Include="Bases\protocol_subject.h" />
     <ClInclude Include="Bases\semaphore.h" />
     <ClInclude Include="IOs\io_buffer.h" />
+    <ClInclude Include="IOs\io_factory.h" />
     <ClInclude Include="IOs\i_io.h" />
     <ClInclude Include="IOs\serial_port.h" />
     <ClInclude Include="IOs\udp.h" />
-    <ClInclude Include="base_ir_len_protocol.h" />
     <ClInclude Include="Json\autolink.h" />
     <ClInclude Include="Json\config.h" />
     <ClInclude Include="Json\features.h" />
@@ -172,20 +213,35 @@
     <ClInclude Include="Json\reader.h" />
     <ClInclude Include="Json\value.h" />
     <ClInclude Include="Json\writer.h" />
+    <ClInclude Include="Protocols\IR_Protocols\base_ir_len_protocol.h" />
     <ClInclude Include="Protocols\IR_Protocols\base_sensor_protocol.h" />
+    <ClInclude Include="Protocols\IR_Protocols\search_type_001_ir_len_protocol.h" />
     <ClInclude Include="Protocols\IR_Protocols\search_type_001_ir_sensor_protocol.h" />
     <ClInclude Include="Protocols\i_protocol.h" />
+    <ClInclude Include="Protocols\Laser_Protocols\base_laser_protocol.h" />
+    <ClInclude Include="Protocols\Laser_Protocols\laser_type_JDIV4C_protocol.h" />
+    <ClInclude Include="Protocols\protocol_factory.h" />
     <ClInclude Include="Protocols\Servo_Protocols\base_servo_protocol.h" />
     <ClInclude Include="Protocols\Servo_Protocols\search_type_001_servo_protocol.h" />
+    <ClInclude Include="Sessions\ir_len_type_001_session.h" />
     <ClInclude Include="Sessions\ir_sensor_type_001_session.h" />
     <ClInclude Include="Sessions\base_session.h" />
+    <ClInclude Include="Sessions\laser_type_001_session.h" />
     <ClInclude Include="Sessions\search_servo_type_001_session.h" />
+    <ClInclude Include="Sessions\session_factory.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bases\loki\Singleton.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Bases\loki\SmallObj.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="CommunicationDll.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="factory_test_main.cpp" />
     <ClCompile Include="IOs\serial_port.cpp" />
     <ClCompile Include="IOs\udp.cpp" />
     <ClCompile Include="Json\json_reader.cpp">
@@ -200,11 +256,17 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Protocols\IR_Protocols\base_ir_len_protocol.cpp" />
     <ClCompile Include="Protocols\IR_Protocols\base_sensor_protocol.cpp" />
+    <ClCompile Include="Protocols\IR_Protocols\search_type_001_ir_len_protocol.cpp" />
     <ClCompile Include="Protocols\IR_Protocols\search_type_001_ir_sensor_protocol.cpp" />
+    <ClCompile Include="Protocols\Laser_Protocols\base_laser_protocol.cpp" />
+    <ClCompile Include="Protocols\Laser_Protocols\laser_type_JDIV4C_protocol.cpp" />
     <ClCompile Include="Protocols\Servo_Protocols\base_servo_protocol.cpp" />
     <ClCompile Include="Protocols\Servo_Protocols\search_type_001_servo_protocol.cpp" />
+    <ClCompile Include="Sessions\ir_len_type_001_session.cpp" />
     <ClCompile Include="Sessions\ir_sensor_type_001_session.cpp" />
+    <ClCompile Include="Sessions\laser_type_001_session.cpp" />
     <ClCompile Include="Sessions\search_servo_type_001_session.cpp" />
     <ClCompile Include="Sessions\base_session.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -218,6 +280,9 @@
   <ItemGroup>
     <None Include="Json\json_valueiterator.inl" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Bases\loki\readme.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
